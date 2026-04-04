@@ -1,17 +1,16 @@
-TC - 001: Создание с валидными данными
-Предусловие: Сервер доступен, переменная {{baseUrl}} настроена
-Шаги: 
-1. Отправить POST запрос на {{baseUrl}}/api/1/item
+### TC - 001: Создание с валидными данными
+**Предусловие:** Сервер доступен, переменная `{{baseUrl}}` настроена  
+**Шаги:**  
+1. Отправить POST запрос на `{{baseUrl}}/api/1/item`  
 2. В Body указаны:
-<h2>
-•	"sellerID": 123456,
-•	"name": "Test item",
-•	"price": 1000,
-•	"statistics": {
-•	"likes": 5,
-•	"viewCount": 100,
-•	"contacts": 10
-<h2>
+   ```json
+     "sellerID": 123456,
+     "name": "Test item",
+     "price": 1000,
+     "statistics": {
+       "likes": 5,
+       "viewCount": 100,
+       "contacts": 10
 Ожидаемый результат: Статус 200 OK.
 В Response указанны: 
 •	Поле id (UUID формат) 
